@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.15"
+  },
+  "name": "crude_operation_server",
+  "version": "1.0.0",
+  "description": "Crude Operation with mongodb",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waqarkhan09099/Crude_Operation_Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waqarkhan09099/Crude_Operation_Server/issues"
+  },
+  "homepage": "https://github.com/waqarkhan09099/Crude_Operation_Server#readme"
+}
