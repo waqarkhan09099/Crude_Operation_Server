@@ -102,7 +102,6 @@ app.delete('/api/user/:id', (req, res) => {
     User.findByIdAndRemove(id, (err, doc) => {
         if (!err) {
             console.log('User Successfully Deleted')
-            console.log(res.send(doc))
             res.send(doc)
         } else {
             res.status(404).send("User id not found")
