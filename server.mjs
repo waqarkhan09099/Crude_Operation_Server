@@ -88,8 +88,7 @@ app.put('/api/user/:id', (req, res) => {
     User.findByIdAndUpdate(id, updateUser, { new: true }, (err, doc) => {
         if (!err) {
             console.log('User Successfully updates')
-            console.log(res.send(doc))
-            res.send(doc)
+            
         } else {
             res.status(404).send("User id not found")
         }
@@ -100,7 +99,7 @@ app.put('/api/user/:id', (req, res) => {
 app.delete('/api/user/:id', (req, res) => {
     const id = req.params.id
     User.findByIdAndRemove(id, (err, doc) => {
-        if (!err) {
+        if (!err)  {
             console.log('User Successfully Deleted')
             res.send(doc)
         } else {
