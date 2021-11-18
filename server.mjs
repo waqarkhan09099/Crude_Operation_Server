@@ -87,7 +87,7 @@ app.put('/api/user/:id', (req, res) => {
 
     User.findByIdAndUpdate(id, updateUser, { new: true }, (err, doc) => {
         if (!err) {
-            console.log('User Successfully updates')
+            res.send(data)            
             
         } else {
             res.status(404).send("User id not found")
