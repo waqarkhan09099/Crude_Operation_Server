@@ -72,17 +72,14 @@ app.post('/api/user', (req, res) => {
 app.put('/api/user/:id', (req, res) => {
     const id = req.params.id
     const updateUser = {}
-    if (req.body.email) {
+    if (req.body.email === "" || req.body.email) {
         updateUser.email = req.body.email
     }
-    if (req.body.name) {
+    if (req.body.name === "" || req.body.name) {
         updateUser.name = req.body.name
     }
-    if (req.body.address) {
+    if (req.body.address === "" || req.body.address) {
         updateUser.address = req.body.address
-    }
-    if (req.body.password) {
-        updateUser.password = req.body.password
     }
 
     User.findByIdAndUpdate(id, updateUser, { new: true }, (err, doc) => {
@@ -90,7 +87,7 @@ app.put('/api/user/:id', (req, res) => {
             res.send(data)            
             
         } else {
-            res.status(404).send("User id not found")
+            res.status(500).send("Error Happened")
         }
     })
 
