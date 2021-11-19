@@ -72,13 +72,13 @@ app.post('/api/user', (req, res) => {
 app.put('/api/user/:id', (req, res) => {
     const id = req.params.id
     const updateUser = {}
-    if (req.body.email === "" || req.body.email) {
+    if ( req.body.email) {
         updateUser.email = req.body.email
     }
-    if (req.body.name === "" || req.body.name) {
+    if ( req.body.name) {
         updateUser.name = req.body.name
     }
-    if (req.body.address === "" || req.body.address) {
+    if ( req.body.address) {
         updateUser.address = req.body.address
     }
 
