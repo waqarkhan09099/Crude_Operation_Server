@@ -84,7 +84,7 @@ app.put('/api/user/:id', (req, res) => {
 
     User.findByIdAndUpdate(id, updateUser, { new: true }, (err, doc) => {
         if (!err) {
-            res.send(data)            
+            res.send(doc)            
             
         } else {
             res.status(500).send("Error Happened")
